@@ -1,5 +1,6 @@
 class PsusController < ApplicationController
   def index
+    @psus = Psu.all
   end
 
   def show

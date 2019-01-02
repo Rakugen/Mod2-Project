@@ -4,19 +4,19 @@ Rails.application.routes.draw do
   resources :users
   resources :builds
 
-  get 'storages/index'
+  get 'storages/', to: 'storages#index'
   get 'storages/:id', to: 'storages#show'
-  get 'cases/index'
+  get 'cases/', to: 'cases#index'
   get 'cases/:id', to: 'cases#show'
-  get 'psus/index'
+  get 'psus/', to: 'psus#index'
   get 'psus/:id', to: 'psus#show'
-  get 'rams/index'
+  get 'rams/', to: 'rams#index'
   get 'rams/:id', to: 'rams#show'
-  get 'mobos/index'
+  get 'mobos/', to: 'mobos#index'
   get 'mobos/:id', to: 'mobos#show'
-  get 'cards/index'
+  get 'cards/', to: 'cards#index'
   get 'cards/:id', to: 'cards#show'
-  get 'cpus/index'
+  get 'cpus/', to: 'cpus#index'
   get 'cpus/:id', to: 'cpus#show'
 
   get 'sessions/new'

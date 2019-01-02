@@ -1,2 +1,8 @@
-<h1>Cards#index</h1>
-<p>Find me in app/views/cards/index.html.erb</p>
+<h1>Card List</h1>
+<ul>
+<% @cards.each do |card| %>
+  <h2><%= card.model %></h2>
+  <li>Memory: <%= card.memory %> GB</li>
+  <li>Price: $<%= card.price %></li>
+<% end %>
+</ul>

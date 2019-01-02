@@ -1,1 +1,11 @@
 <h1>CPU List</h1>
+<ul>
+<% @cpus.each do |cpu| %>
+<h2><%= cpu.model %></h2>
+
+  <li>Speed: <%= cpu.speed %> GHz</li>
+  <li>Cores: <%= cpu.cores %></li>
+  <li>Price: $<%= cpu.price %></li>
+
+<% end %>
+</ul>

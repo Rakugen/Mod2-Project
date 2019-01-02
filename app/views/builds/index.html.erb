@@ -2,3 +2,4 @@
 <% @builds.each do |build| %>
   <%= link_to build.build_name, build_path(build) %><br>
 <% end %>
+<%= button_to "NEW BUILD", "/builds/new", :method => "get" %>

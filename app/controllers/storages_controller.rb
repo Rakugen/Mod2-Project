@@ -1,5 +1,6 @@
 class StoragesController < ApplicationController
   def index
+    @storages = Storage.all
   end
 
   def show

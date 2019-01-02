@@ -1,2 +1,8 @@
-<h1>Cases#index</h1>
-<p>Find me in app/views/cases/index.html.erb</p>
+<h1>Case List</h1>
+<ul>
+<% @cases.each do |c| %>
+  <h2><%= c.model %></h2>
+  <li>Type: <%= c.mobo_type %></li>
+  <li>Price: $<%= c.price %></li>
+<% end %>
+</ul>

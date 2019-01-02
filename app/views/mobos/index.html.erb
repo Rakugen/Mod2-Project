@@ -1,2 +1,9 @@
-<h1>Mobos#index</h1>
-<p>Find me in app/views/mobos/index.html.erb</p>
+<h1>Motherboard List</h1>
+<ul>
+<% @mobos.each do |mobo| %>
+  <h2><%= mobo.model %></h2>
+  <li>Ram Slots: <%= mobo.ram_slots %></li>
+  <li>Type: <%= mobo.mobo_type %></li>
+  <li>Price: $<%= mobo.price %></li>
+<% end %>
+</ul>

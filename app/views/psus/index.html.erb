@@ -1,2 +1,8 @@
-<h1>Psus#index</h1>
-<p>Find me in app/views/psus/index.html.erb</p>
+<h1>Power Supply Unit List</h1>
+<ul>
+<% @psus.each do |psu| %>
+  <h2><%= psu.model %></h2>
+  <li>Wattage: <%= psu.watts %> </li>
+  <li>Price: $<%= psu.price %></li>
+<% end %>
+</ul>

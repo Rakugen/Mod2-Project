@@ -1,2 +1,11 @@
-<h1>Storages#index</h1>
-<p>Find me in app/views/storages/index.html.erb</p>
+<h1>Storage List</h1>
+<ul>
+<% @storages.each do |storage| %>
+<h2><%= storage.model %></h2>
+
+  <li>Capacity: <%= storage.capacity %> GB</li>
+  <li>Type: <%= storage.drive_type %></li>
+  <li>Price: $<%= storage.price %></li>
+
+<% end %>
+</ul>
