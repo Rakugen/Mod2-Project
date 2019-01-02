@@ -1,0 +1,13 @@
+<h1>New User Page</h1>
+<ul>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+    <li> <%= error %> </li>
+    <% end %>
+  <% end%>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :user_name, placeholder: "User Name" %>
+  <%= f.submit "Create New User" %>
+<% end %>

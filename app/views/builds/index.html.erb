@@ -1,0 +1,4 @@
+<h1>All Builds Page</h1>
+<% @builds.each do |build| %>
+  <%= link_to build.build_name, build_path(build) %><br>
+<% end %>

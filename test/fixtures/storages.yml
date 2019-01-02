@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  capacity: MyString
+  case_type: MyString
+  price: 1
+  build_id: 1
+
+two:
+  model: MyString
+  capacity: MyString
+  case_type: MyString
+  price: 1
+  build_id: 1

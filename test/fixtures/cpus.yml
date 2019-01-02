@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  speed: 1
+  cores: 1
+  price: 1
+  mobo_type: MyString
+  build_id: 1
+
+two:
+  model: MyString
+  speed: 1
+  cores: 1
+  price: 1
+  mobo_type: MyString
+  build_id: 1

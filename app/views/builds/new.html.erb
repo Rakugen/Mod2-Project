@@ -1,0 +1,21 @@
+<h1>Create a New Build</h1>
+<ul>
+  <% if @errors %>
+    <% @errors.each do |error| %>
+    <li> <%= error %> </li>
+    <% end %>
+  <% end%>
+</ul>
+
+<%= form_for @build do |f| %>
+  <%= f.text_field :build_name, placeholder: "Build Name" %><br>
+  <%= collection_select(:build, :cpu_id, Cpu.all, :id, :model) %><br>
+  <%= collection_select(:build, :card_id, Card.all, :id, :model) %><br>
+  <%= collection_select(:build, :mobo_id, Mobo.all, :id, :model) %><br>
+  <%= collection_select(:build, :ram_id, Ram.all, :id, :model) %><br>
+  <%= collection_select(:build, :psu_id, Psu.all, :id, :model) %><br>
+  <%= collection_select(:build, :case_id, Case.all, :id, :model) %><br>
+  <%= collection_select(:build, :storage_id, Storage.all, :id, :model) %><br>
+  <%= collection_select(:build, :user_id, User.all, :id, :user_name) %><br>
+  <%= f.submit "Create Build" %>
+<% end %>

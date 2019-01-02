@@ -1,0 +1,15 @@
+<h1><%= @build.build_name %> Build</h1>
+<ul>
+
+  <li>CPU: <%= link_to "#{@build.cpu.model}", "/cpus/#{@build.cpu.id}" %></li>
+  <li>Card: <%= link_to "#{@build.card.model}", "/cards/#{@build.card.id}" %></li>
+  <li>Mobo: <%= link_to "#{@build.mobo.model}", "/mobos/#{@build.mobo.id}" %></li>
+  <li>Ram: <%= link_to "#{@build.ram.model}", "/rams/#{@build.ram.id}" %></li>
+  <li>PSU: <%= link_to "#{@build.psu.model}", "/psus/#{@build.psu.id}" %></li>
+  <li>Case: <%= link_to "#{@build.case.model}", "/cases/#{@build.case.id}" %></li>
+  <li>Storage: <%= link_to "#{@build.storage.model}", "/storages/#{@build.storage.id}" %></li>
+  <%= button_to "Delete Build", {:action => 'destroy', :id => @build.id }, :method => :delete %>
+
+  <br>
+
+</ul>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  ram_slots: 1
+  case_type: MyString
+  mobo_type: MyString
+  price: 1
+  build_id: 1
+
+two:
+  model: MyString
+  ram_slots: 1
+  case_type: MyString
+  mobo_type: MyString
+  price: 1
+  build_id: 1

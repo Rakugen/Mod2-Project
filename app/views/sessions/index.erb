@@ -1,0 +1,7 @@
+<h1>Login Page</h1>
+<% if session[:name] == nil %>
+  <%= link_to "Login Here", "/login" %>
+<% else %>
+  <%= "hi, #{name} " %>
+  <%= link_to "Logout", "/logout" %>
+<% end %>

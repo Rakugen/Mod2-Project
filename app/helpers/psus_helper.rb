@@ -1,0 +1,2 @@
+module PsusHelper
+end
