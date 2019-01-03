@@ -1,4 +1,4 @@
-<h1>Card List</h1>
+<h1>Graphics Card List</h1>
 <ul>
 <% @cards.each do |card| %>
   <h2><%= card.model %></h2>
@@ -6,3 +6,5 @@
   <li>Price: $<%= card.price %></li>
 <% end %>
 </ul>
+
+<h3>Most Popular: <%= Card.most_popular %></h3>

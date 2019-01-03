@@ -1,5 +1,17 @@
 <h1>All Builds Page</h1>
-<% @builds.each do |build| %>
-  <%= link_to build.build_name, build_path(build) %><br>
-<% end %>
+
+<div class="card-row">
+  <% @builds.each do |build| %>
+    <div class="card">
+      <%=image_tag("Asrock_logo.jpg", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to build.build_name, build_path(build) %></b></h4>
+      <p><%= build.user.username %></p>
+    </div>
+  </div>
+  <br>
+  <% end %>
+</div>
+
 <%= button_to "NEW BUILD", "/builds/new", :method => "get" %>

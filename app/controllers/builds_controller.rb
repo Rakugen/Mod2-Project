@@ -1,5 +1,7 @@
 class BuildsController < ApplicationController
   before_action :find_build, only: [:show, :edit, :update, :destroy]
+  
+
   def index
     # @builds = @user.builds
     @builds = Build.all
@@ -34,6 +36,7 @@ class BuildsController < ApplicationController
     @build.destroy
     redirect_to '/builds'
   end
+
 
   private
   def find_build

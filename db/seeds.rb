@@ -9,8 +9,8 @@ require 'faker'
 
 puts "Seeding now..."
 # User: user_name
-u1 = User.create(user_name: "Simon")
-u2 = User.create(user_name: "Linda")
+u1 = User.create(username: "Simon", password: "123")
+u2 = User.create(username: "Linda", password: "321")
 
 # CPU: model, speed, cores, price, build_id
 cpu1 = Cpu.create(model: "Intel Core i7-6700K", speed: 4.0, cores: 4, price: 315.89) #, build_id: b1.id)

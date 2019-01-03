@@ -9,4 +9,11 @@ class Build < ApplicationRecord
   belongs_to :user
 
   validates :build_name, presence: true
-end
+
+
+  def total_costs
+    total = self.cpu.price + self.card.price + self.mobo.price +
+    self.ram.price + self.psu.price + self.case.price +
+    self.storage.price
+  end
+end # end of Build class

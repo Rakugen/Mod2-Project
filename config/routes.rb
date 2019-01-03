@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # get 'users/index'
   # get 'users/show'
-  resources :users
+  resources :users, only: [:show, :new, :create, :destroy]
   resources :builds
 
   get 'storages/', to: 'storages#index'
@@ -19,9 +19,8 @@ Rails.application.routes.draw do
   get 'cpus/', to: 'cpus#index'
   get 'cpus/:id', to: 'cpus#show'
 
-  get 'sessions/new'
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
