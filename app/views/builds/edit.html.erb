@@ -1,13 +1,15 @@
 <h1><%= @build.build_name%> Edit Page</h1>
-
+<div class="input-form">
 <%= form_for @build do |f| %>
   <%= f.text_field :build_name, placeholder: "Build Name" %><br>
-  <%= collection_select(:build, :cpu_id, Cpu.all, :id, :model) %><br>
-  <%= collection_select(:build, :card_id, Card.all, :id, :model) %><br>
-  <%= collection_select(:build, :mobo_id, Mobo.all, :id, :model) %><br>
-  <%= collection_select(:build, :ram_id, Ram.all, :id, :model) %><br>
-  <%= collection_select(:build, :psu_id, Psu.all, :id, :model) %><br>
-  <%= collection_select(:build, :case_id, Case.all, :id, :model) %><br>
-  <%= collection_select(:build, :storage_id, Storage.all, :id, :model) %><br>
+  CPU: <br><%= collection_select(:build, :cpu_id, Cpu.all, :id, :model) %><br>
+  Card: <br><%= collection_select(:build, :card_id, Card.all, :id, :model) %><br>
+  Mobo: <br><%= collection_select(:build, :mobo_id, Mobo.all, :id, :model) %><br>
+  Ram: <br><%= collection_select(:build, :ram_id, Ram.all, :id, :model) %><br>
+  PSU: <br><%= collection_select(:build, :psu_id, Psu.all, :id, :model) %><br>
+  Case: <br><%= collection_select(:build, :case_id, Case.all, :id, :model) %><br>
+  Storage: <br><%= collection_select(:build, :storage_id, Storage.all, :id, :model) %><br>
   <%= f.submit "Update Build" %>
 <% end %>
+
+</div>

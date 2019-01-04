@@ -1,19 +1,15 @@
 <h1>New User Page</h1>
-<ul>
-  <% if @errors %>
-  <% @errors.each do |error| %>
-  <li> <%= error %> </li>
-  <% end %>
-  <% end%>
-</ul>
-
+<h1>Welcome to PC Shopper!</h1>
 <h4><%= flash[:notice] %></h4>
-
+<div class="login-form">
 <%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br><br>
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br>
 
-  <%= f.submit %>
+  <%= f.submit "Create User"%>
 <% end %>
+<br>
+<%= button_to "Back to Login", "/login", :method => "get" %>
+</div>

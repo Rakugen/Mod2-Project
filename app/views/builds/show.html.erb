@@ -1,16 +1,21 @@
 <h1><%= @build.build_name %> Build</h1>
+<h1><%= @build.build_name %></h1>
 <ul>
   <% if current_user.id == @user.id %>
     <%= button_to "UPDATE", "/builds/#{@build.id}/edit", :method => "get" %><br>
   <% end %>
-  <li>CPU: <%= link_to "#{@build.cpu.model}", "/cpus/#{@build.cpu.id}" %></li>
-  <li>Card: <%= link_to "#{@build.card.model}", "/cards/#{@build.card.id}" %></li>
-  <li>Mobo: <%= link_to "#{@build.mobo.model}", "/mobos/#{@build.mobo.id}" %></li>
-  <li>Ram: <%= link_to "#{@build.ram.model}", "/rams/#{@build.ram.id}" %></li>
-  <li>PSU: <%= link_to "#{@build.psu.model}", "/psus/#{@build.psu.id}" %></li>
-  <li>Case: <%= link_to "#{@build.case.model}", "/cases/#{@build.case.id}" %></li>
-  <li>Storage: <%= link_to "#{@build.storage.model}", "/storages/#{@build.storage.id}" %></li>
-  <li>Total Cost: $<%= @build.total_costs.round(2) %> </li><br>
+  <div class="card-row">
+    <div class="card-build">
+      <li>CPU: <%= link_to "#{@build.cpu.model}", "/cpus/#{@build.cpu.id}" %></li>
+      <li>Card: <%= link_to "#{@build.card.model}", "/cards/#{@build.card.id}" %></li>
+      <li>Mobo: <%= link_to "#{@build.mobo.model}", "/mobos/#{@build.mobo.id}" %></li>
+      <li>Ram: <%= link_to "#{@build.ram.model}", "/rams/#{@build.ram.id}" %></li>
+      <li>PSU: <%= link_to "#{@build.psu.model}", "/psus/#{@build.psu.id}" %></li>
+      <li>Case: <%= link_to "#{@build.case.model}", "/cases/#{@build.case.id}" %></li>
+      <li>Storage: <%= link_to "#{@build.storage.model}", "/storages/#{@build.storage.id}" %></li>
+      <li>Total Cost: $<%= @build.total_costs.round(2) %> </li><br>
+    </div>
+  </div>
 
   <% if current_user.id == @user.id %>
     <%= button_to "DELETE", {:action => 'destroy', :id => @build.id }, :method => :delete %>

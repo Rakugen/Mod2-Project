@@ -1,16 +1,16 @@
 <h1>Login</h1>
-
+<h1>Welcome to PC Shopper!</h1>
 <h4><%= flash[:notice] %></h4>
-
-<!-- form will POST to '/login' -->
+<div class="login-form">
 <%= form_tag(login_path) do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
+  <%= label_tag :username %><br>
+  <%= text_field_tag :username %><br><br>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
+  <%= label_tag :password %><br>
+  <%= password_field_tag :password %><br>
 
   <%= submit_tag 'Login' %>
 <% end %>
-
+<br>
 <%= button_to "Create New User", "/users/new", :method => "get" %>
+</div>

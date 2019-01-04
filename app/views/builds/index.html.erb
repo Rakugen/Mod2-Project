@@ -3,7 +3,7 @@
 <div class="card-row">
   <% @builds.each do |build| %>
     <div class="card">
-      <%=image_tag("cpu.png", class: "card-image") %>
+      <%=image_tag("cpu.png", class: "card-icon") %>
 
     <div class="container">
       <h4><b><%= link_to build.build_name, build_path(build) %></b></h4>
