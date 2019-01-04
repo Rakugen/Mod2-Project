@@ -1,16 +1,16 @@
+
 <h1><%= @user.username %>'s User Page</h1>
-<h2>Builds:</h2>
-<ul>
-<% @user.builds.each do |build| %>
-<h3><%= build.build_name %></h3>
-  <li>CPU: <%= build.cpu.model %></li>
-  <li>Card: <%= build.card.model %></li>
-  <li>Mobo: <%= build.mobo.model %></li>
-  <li>Ram: <%= build.ram.model %></li>
-  <li>PSU: <%= build.psu.model %></li>
-  <li>Case: <%= build.case.model %></li>
-  <li>Storage: <%= build.storage.model %></li>
-  <%= link_to "Build", build_path(build) %>
-  <br>
-<% end %>
-</ul>
+<h2>My Builds:</h2>
+<div class="card-row">
+  <% @user.builds.each do |build| %>
+    <div class="card">
+      <%=image_tag("cpu.png", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to build.build_name, build_path(build) %></b></h4>
+      <p><%= build.user.username %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+<%= button_to "NEW BUILD", "/builds/new", :method => "get" %>

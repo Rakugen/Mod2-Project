@@ -1,10 +1,15 @@
 <h1>Graphics Card List</h1>
-<ul>
-<% @cards.each do |card| %>
-  <h2><%= card.model %></h2>
-  <li>Memory: <%= card.memory %> GB</li>
-  <li>Price: $<%= card.price %></li>
-<% end %>
-</ul>
+
+<div class="card-row">
+  <% @cards.each do |card| %>
+    <div class="card">
+      <%=image_tag("#{card.url}", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to card.model, "/cards/#{card.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Card.most_popular %></h3>

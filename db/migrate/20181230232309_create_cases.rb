@@ -6,7 +6,7 @@ class CreateCases < ActiveRecord::Migration[5.2]
       t.string :mobo_type
       t.float :price
       # t.integer :build_id
-
+      t.string :url
       t.timestamps
     end
   end

@@ -1,11 +1,14 @@
 <h1>Ram List</h1>
-<ul>
-<% @rams.each do |ram| %>
-  <h2><%= ram.model %></h2>
-  <li>Type: <%= ram.speed %></li>
-  <li>Size: <%= ram.size %> GB</li>
-  <li>Price: $<%= ram.price %></li>
-<% end %>
-</ul>
+<div class="card-row">
+  <% @rams.each do |c| %>
+    <div class="card">
+      <%=image_tag("#{c.url}", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to c.model, "/rams/#{c.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Ram.most_popular %></h3>

@@ -4,6 +4,7 @@ class CreateCards < ActiveRecord::Migration[5.2]
       t.string :model
       t.integer :memory
       t.float :price
+      t.string :url
       # t.integer :build_id
 
       t.timestamps

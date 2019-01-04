@@ -1,10 +1,14 @@
 <h1>Power Supply Unit List</h1>
-<ul>
-<% @psus.each do |psu| %>
-  <h2><%= psu.model %></h2>
-  <li>Wattage: <%= psu.watts %> </li>
-  <li>Price: $<%= psu.price %></li>
-<% end %>
-</ul>
+<div class="card-row">
+  <% @psus.each do |c| %>
+    <div class="card">
+      <%=image_tag("#{c.url}", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to c.model, "/psus/#{c.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Psu.most_popular %></h3>

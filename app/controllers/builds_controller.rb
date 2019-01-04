@@ -1,6 +1,5 @@
 class BuildsController < ApplicationController
   before_action :find_build, only: [:show, :edit, :update, :destroy]
-  
 
   def index
     # @builds = @user.builds
@@ -8,6 +7,7 @@ class BuildsController < ApplicationController
   end
 
   def show
+    @user = @build.user
   end
 
   def new
@@ -15,7 +15,7 @@ class BuildsController < ApplicationController
   end
 
   def create
-    @build = Build.create(build_params)
+    @build = Build.create(build_params.merge(user_id: session[:user_id]))
     if @build.valid?
       redirect_to @build
     else
@@ -44,6 +44,6 @@ class BuildsController < ApplicationController
   end
 
   def build_params
-    params.require(:build).permit(:build_name, :cpu_id, :card_id, :mobo_id, :ram_id, :psu_id, :case_id, :storage_id, :user_id)
+    params.require(:build).permit(:build_name, :cpu_id, :card_id, :mobo_id, :ram_id, :psu_id, :case_id, :storage_id)
   end
 end

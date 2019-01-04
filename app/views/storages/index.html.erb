@@ -1,13 +1,14 @@
 <h1>Storage List</h1>
-<ul>
-<% @storages.each do |storage| %>
-<h2><%= storage.model %></h2>
+<div class="card-row">
+  <% @storages.each do |c| %>
+    <div class="card">
+      <%=image_tag("#{c.url}", class: "card-image") %>
 
-  <li>Capacity: <%= storage.capacity %> GB</li>
-  <li>Type: <%= storage.drive_type %></li>
-  <li>Price: $<%= storage.price %></li>
-
-<% end %>
-</ul>
+    <div class="container">
+      <h4><b><%= link_to c.model, "/storages/#{c.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Storage.most_popular %></h3>

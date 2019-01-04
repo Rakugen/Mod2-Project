@@ -1,11 +1,14 @@
 <h1>Motherboard List</h1>
-<ul>
-<% @mobos.each do |mobo| %>
-  <h2><%= mobo.model %></h2>
-  <li>Ram Slots: <%= mobo.ram_slots %></li>
-  <li>Type: <%= mobo.mobo_type %></li>
-  <li>Price: $<%= mobo.price %></li>
-<% end %>
-</ul>
+<div class="card-row">
+  <% @mobos.each do |c| %>
+    <div class="card">
+      <%=image_tag("#{c.url}", class: "card-image") %>
+
+    <div class="container">
+      <h4><b><%= link_to c.model, "/mobos/#{c.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Mobo.most_popular %></h3>

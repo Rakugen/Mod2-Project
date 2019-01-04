@@ -1,13 +1,14 @@
 <h1>CPU List</h1>
-<ul>
-<% @cpus.each do |cpu| %>
-<h2><%= cpu.model %></h2>
+<div class="card-row">
+  <% @cpus.each do |c| %>
+    <div class="card">
+      <%=image_tag("#{c.url}", class: "card-image") %>
 
-  <li>Speed: <%= cpu.speed %> GHz</li>
-  <li>Cores: <%= cpu.cores %></li>
-  <li>Price: $<%= cpu.price %></li>
-
-<% end %>
-</ul>
+    <div class="container">
+      <h4><b><%= link_to c.model, "/cpus/#{c.id}" %></b></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
 
 <h3>Most Popular: <%= Cpu.most_popular %></h3>

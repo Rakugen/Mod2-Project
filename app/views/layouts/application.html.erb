@@ -15,14 +15,17 @@
 </html>
 
 <div class="navbar navbar-dark bg-dark">
-  <a href="/builds">Your Builds</a>
-  <a href= '/logout' >Logout</a>
-  <form class="navbar-form navbar-left" action="">
+  <% if !!current_user %>
+    <a href="/builds">All Builds</a>
+    <a href= <%= "/users/#{current_user.id}" %>>My Builds</a>
+    <a href= '/logout' data-method="delete">Logout</a>
+  <% end %>
+  <form class="navbar-form navbar-right" action="/login">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search">
       <div class="input-group-btn">
         <button class="btn" type="submit">Go!</button>
-          <!-- <i class="glyphicon glyphicon-search"></i> -->
+          <!-- <cpi class="glyphicon glyphicon-search"></i> -->
         <!-- </button> -->
       </div>
     </div>

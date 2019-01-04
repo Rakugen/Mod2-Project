@@ -9,6 +9,5 @@
   <%= collection_select(:build, :psu_id, Psu.all, :id, :model) %><br>
   <%= collection_select(:build, :case_id, Case.all, :id, :model) %><br>
   <%= collection_select(:build, :storage_id, Storage.all, :id, :model) %><br>
-  <%= collection_select(:build, :user_id, User.all, :id, :user_name) %><br>
   <%= f.submit "Update Build" %>
 <% end %>

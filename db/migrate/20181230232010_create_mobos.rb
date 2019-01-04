@@ -8,6 +8,7 @@ class CreateMobos < ActiveRecord::Migration[5.2]
       t.float :price
       # t.integer :build_id
 
+      t.string :url
       t.timestamps
     end
   end

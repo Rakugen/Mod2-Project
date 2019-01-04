@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.string "model"
     t.integer "memory"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.string "model"
     t.string "mobo_type"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.float "speed"
     t.integer "cores"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.integer "ram_slots"
     t.string "mobo_type"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,6 +68,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.string "model"
     t.integer "watts"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,6 +78,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.string "speed"
     t.integer "size"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,6 +88,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_232634) do
     t.string "capacity"
     t.string "drive_type"
     t.float "price"
+    t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

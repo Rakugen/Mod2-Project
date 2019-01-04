@@ -18,12 +18,16 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
+  text-align: center;
 }
 a {
-  color: hotpink;
+  color: #ff571f;
 }
 a:hover{
   color: #ffd322;
+}
+ul{
+  list-style-type: none;
 }
 .navbar {
   overflow: hidden;
@@ -52,6 +56,8 @@ a:hover{
   height: 150px;
   width: 200px;
   flex: none;
+  margin: 2em 0em;
+  overflow-x: scroll;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -60,6 +66,9 @@ a:hover{
   display: flex;
   // flex-basis: 15em;
   flex-wrap: wrap;
+  width: 80%;
+  justify-content: space-around;
+  margin: auto;
 }
 .container {
   padding: 2px 16px;
@@ -84,11 +93,14 @@ input[type=submit]:hover{
   padding: 5px;
 }
 .card-image {
-  width: 30%;
+  width: 50%;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .container {
   padding: 2px 16px;
+}
+.input-group{
+
 }
